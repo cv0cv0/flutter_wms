@@ -25,7 +25,7 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) => new MaterialApp(
         title: 'Flutter WMS',
         theme: new ThemeData(
-          primarySwatch: Colors.blue,
+          primaryColor: const Color(0xffff7528),
         ),
         home: _page,
       );
