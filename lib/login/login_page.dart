@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_wms/home/home_page.dart';
 import 'package:flutter_wms/widget/loading_indicator.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -121,10 +122,9 @@ class _LoginPageState extends State<LoginPage> {
         _isLoading = true;
       });
 
-      new Timer(new Duration(seconds: 1), () {
-        // setState(() {
-        //   _isLoading = false;
-        // });
+      new Timer(new Duration(seconds: 1), () async {
+        final prefs = await SharedPreferences.getInstance();
+        await prefs.setBool('is_login', true);
 
         Navigator.of(context).pushReplacement(
           new MaterialPageRoute(
