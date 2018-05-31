@@ -23,12 +23,12 @@ class HomePage extends StatelessWidget {
         body: new Stack(
           children: <Widget>[
             new Image.asset('assets/images/bg_home.png',
-                width: 750.0, fit: BoxFit.cover),
+                width: 750.0, height: 1334.0, fit: BoxFit.cover),
             new Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 new Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     _buildCardWidget(
                       const Color(0xffff8586),
@@ -39,7 +39,7 @@ class HomePage extends StatelessWidget {
                     ),
                     _buildCardWidget(
                       const Color(0xff82cee8),
-                      const EdgeInsets.only(top: 36.0, right: 32.0),
+                      const EdgeInsets.only(top: 36.0, left: 52.0),
                       'assets/icons/ic_picking.png',
                       '拣配',
                       () {},
