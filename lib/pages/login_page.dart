@@ -128,7 +128,7 @@ class _LoginPageState extends State<LoginPage> {
 
         Navigator.of(context).pushReplacement(
           new MaterialPageRoute(
-            builder: (BuildContext context) => new HomePage(),
+            builder: (context) => new HomePage(),
           ),
         );
       });

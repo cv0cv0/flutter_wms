@@ -41,10 +41,11 @@ class SettingPage extends StatelessWidget {
                                     await SharedPreferences.getInstance();
                                 await prefs.setBool('is_login', false);
 
-                                Navigator.of(context).pushReplacement(
+                                Navigator.of(context).pushAndRemoveUntil(
                                       MaterialPageRoute(
                                         builder: (context) => LoginPage(),
                                       ),
+                                      (route) => route == null,
                                     );
                               },
                             ),
