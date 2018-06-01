@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_wms/home/home_page.dart';
-import 'package:flutter_wms/login/login_page.dart';
+import 'package:flutter_wms/pages/home_page.dart';
+import 'package:flutter_wms/pages/login_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() => runApp(new App());
@@ -24,7 +24,9 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) => new MaterialApp(
         title: 'Flutter WMS',
         theme: new ThemeData(
+          primaryColorBrightness: Brightness.dark,
           primaryColor: const Color(0xffff7528),
+          // scaffoldBackgroundColor: const Color(0xffe9e9e9),
         ),
         home: _page,
       );

@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_wms/home/home_page.dart';
+import 'package:flutter_wms/pages/home_page.dart';
 import 'package:flutter_wms/widget/loading_indicator.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

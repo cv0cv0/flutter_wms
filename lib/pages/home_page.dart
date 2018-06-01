@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_wms/pages/setting_page.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -6,17 +7,19 @@ class HomePage extends StatelessWidget {
         appBar: new AppBar(
           centerTitle: true,
           title: new Text(
-            '首页',
-            style: new TextStyle(color: Colors.white),
+            '首页'
           ),
           actions: <Widget>[
             new IconButton(
-              iconSize: 32.0,
-              icon: new Icon(
-                Icons.menu,
-                color: Colors.white,
-              ),
-              onPressed: () {},
+              iconSize: 28.0,
+              icon: new Icon(Icons.menu),
+              onPressed: () {
+                Navigator.of(context).push(
+                      new MaterialPageRoute(
+                        builder: (context) => new SettingPage(),
+                      ),
+                    );
+              },
             ),
           ],
         ),
